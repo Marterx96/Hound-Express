@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guias de seguimiento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <!--Header-->
+    <header class="header">
+        <a href="#" class="header__logo">
+            <img class="header__img" src="img/M6-imagotipo-Hound_Express/logoAzulBlancoHE.png" alt="">
+        </a>
+        <nav class="header__nav">
+            <a class="header__nav__a" href="">Inicio</a>
+            <a class="header__nav__a" href="">Registro de Gu&iacute;as</a>
+            <a class="header__nav__a" href="">Estado General</a>
+            <a class="header__nav__a" href="">Lista de Gu&iacute;as</a>
+            <a class="header__nav__a" href="">Buscar Gu&iacute;as</a>
+            <a class="header__nav__a" href="">Historial de Gu&iacute;as</a>
+
+        </nav>
+    </header>
+    <!--Banner-->
+    <section class="banner" id="banner">
+        <h1 class="banner__h1">Ubica tu pedido en todo momento <br>Somos una empresa comprometida con tu entrega</h1>
+
+    </section>
+    <!-- Formulario de Registro -->
+    <section class="formulario" id="formulario">
+        <h2 class="formulario__h2">Registro de Gu&iacute;as</h2>
+        <form action="">
+            <label for="numero">Numero de Guia: </label>
+            <input class="formulario__controls" type="text" id="numero" placeholder="Ejemplo: 0000">
+
+            <label for="origen">Origen: </label>
+            <input class="formulario__controls" type="text" id="origen" placeholder="Ciudad de origen">
+
+            <label for="destino">Destino: </label>
+            <input class="formulario__controls" type="text" id="destino" placeholder="Ciudad de destino">
+            
+            <label for="destinatario">Destinatario: </label>
+            <input class="formulario__controls" type="text" id="destinatario" placeholder="Nombre del destinatario">
+
+            <label for="fecha">Fecha de creación: </label>
+            <input class="formulario__controls" type="date" id="fecha">
+
+            <label for="estado">Estado inicial: </label>
+            <select class="formulario__controls" id="estado"> 
+                <option value="pendiente">Pendiente</option>
+                <option value="transito">En tránsito</option>
+                <option value="entregado">Entregado</option>
+
+            </select>
+            <button class="button" type="submit">Registrar Guia</button>
+
+           
+            
+         
+        </form>
+
+    </section>
+    <!-- Panel de estado -->
+     <section class="estado" id="estado__general">
+        <h2 class="estado__h2" >Estado General</h2>
+        <P class="estado__p">N&uacute;mero total de Gu&iacute;as activas: 2</P>
+        <P class="estado__p">Gu&iacute;as en tr&aacute;ncito: 1</P>
+        <P class="estado__p">Gu&iacute;as entregadas: 0 </P>
+
+
+    
+        
+
+     </section>
+
+    <!-- Lista de guías -->
+     <section class="listas" id="listas">
+        <h2 class="listas__h2" >Lista de Guías</h2>
+        <table class="listas__table">
+            <thead class="listas__thead">
+            <tr class="listas__tr">
+                <th class="listas__th">Número de guía</th>
+                <th class="listas__th">Estado actual</th>
+                <th class="listas__th">Origen</th>
+                <th class="listas__th">Destino</th>
+                <th class="listas__th">Fecha de la última actualización</th>
+                <th class="listas__th">Opciones</th>
+
+            </tr>
+        </thead class="listas__thead">
+            <tbody class="listas__tbody">
+                <tr class="listas__tr">
+                    <td class="listas__td listas__td--movil">Numero</td>
+                    <td class="listas__td" >0034</td>
+                    <td class="listas__td listas__td--movil">Estado</td>
+                    <td class="listas__td">EN TRANCITO</td>
+                    <td class="listas__td listas__td--movil">Origen</td>
+                    <td class="listas__td">USA</td>
+                    <td class="listas__td listas__td--movil">Destino</td>
+                    <td class="listas__td">MEX</td>
+                    <td class="listas__td listas__td--movil">Fecha</td>
+                    <td class="listas__td">12/03/2025</td>
+                    <td class="listas__td">
+                        <button class="listas__button">Actualizar</button>
+                        <button class="listas__button">Historial</button>
+                    </td>
+                </tr>
+                <tr class="listas__tr">
+                    <td class="listas__td listas__td--movil">Numero</td>
+                    <td class="listas__td">0034</td>
+                    <td class="listas__td listas__td--movil">Estado</td>
+                    <td class="listas__td">EN TRANCITO</td>
+                    <td class="listas__td listas__td--movil">Origen</td>
+                    <td class="listas__td">USA</td>
+                    <td class="listas__td listas__td--movil">Destino</td>
+                    <td class="listas__td">MEX</td>
+                    <td class="listas__td listas__td--movil">Fecha</td>
+                    <td class="listas__td">12/03/2025</td>
+                    <td class="listas__td">
+                        <button class="listas__button">Actualizar</button>
+                        <button class="listas__button">Historial</button>
+                    </td>
+                </tr>
+                <tr class="listas__tr">
+                    <td class="listas__td listas__td--movil"">Numero</td>
+                    <td class="listas__td">0034</td>
+                    <td class="listas__td listas__td--movil">Estado</td>
+                    <td class="listas__td">EN TRANCITO</td>
+                    <td class="listas__td listas__td--movil">Origen</td>
+                    <td class="listas__td">USA</td>
+                    <td class="listas__td listas__td--movil">Destino</td>
+                    <td class="listas__td">MEX</td>
+                    <td class="listas__td listas__td--movil">Fecha</td>
+                    <td class="listas__td">12/03/2025</td>
+                    <td class="listas__td">
+                        <button class="listas__button">Actualizar</button>
+                        <button class="listas__button">Historial</button>
+                    </td>
+                </tr>
+                <tr class="listas__tr">
+                    <td class="listas__td listas__td--movil">Numero</td>
+                    <td class="listas__td">0034</td>
+                    <td class="listas__td listas__td--movil">Estado</td>
+                    <td class="listas__td">EN TRANCITO</td>
+                    <td class="listas__td listas__td--movil">Origen</td>
+                    <td class="listas__td">USA</td>
+                    <td class="listas__td listas__td--movil">Destino</td>
+                    <td class="listas__td">MEX</td>
+                    <td class="listas__td listas__td--movil">Fecha</td>
+                    <td class="listas__td">12/03/2025</td>
+                    <td class="listas__td">
+                        <button class="listas__button">Actualizar</button>
+                        <button class="listas__button">Historial</button>
+                    </td>
+                </tr>
+                <tr class="listas__tr">
+                    <td class="listas__td listas__td--movil">Numero</td>
+                    <td class="listas__td">0034</td>
+                    <td class="listas__td listas__td--movil">Estado</td>
+                    <td class="listas__td">EN TRANCITO</td>
+                    <td class="listas__td listas__td--movil">Origen</td>
+                    <td class="listas__td">USA</td>
+                    <td class="listas__td listas__td--movil">Destino</td>
+                    <td class="listas__td">MEX</td>
+                    <td class="listas__td listas__td--movil">Fecha</td>
+                    <td class="listas__td">12/03/2025</td>
+                    <td class="listas__td">
+                        <button class="listas__button">Actualizar</button>
+                        <button class="listas__button">Historial</button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+
+     </section>
+   <!--Footer-->
+   <footer class="footer">
+    <div  class="footer__container">
+        <div class="footer__row">
+            <div class="footer__logo"><img class="footer__img" src="img/M6-imagotipo-Hound_Express/logo-Hound_Express-bg-white.png" alt=""></div>
+            <div class="footer__links">
+                
+                <ul class="footer__ul">
+                    <li><a class="footer__a" href="">Inicio</a></li>
+                    <li><a class="footer__a" href="">Registro de Gu&iacute;as</a></li>
+                    <li><a class="footer__a" href="">Estado General</a></li>
+                </ul>
+
+            </div>
+            <div class="footer__links">
+                <ul class="footer__ul">
+                    <li><a class="footer__a" href="">Lista de Gu&iacute;as</a></li>
+                    <li><a class="footer__a" href="">Buscar Gu&iacute;as</a></li>
+                    <li><a class="footer__a" href="">Historial de Gu&iacute;as</a></li>
+                </ul>
+
+            </div>
+            <div class="footer__links">
+                
+                <ul class="footer__ul">
+                    <li><a class="footer__a" href="">55-55-55-55-55</a></li>
+                    <li><a class="footer__a" href="">correo@example.com</a></li>
+                    
+                </ul>
+                <div class="footer__social">
+                    <a class="footer__a--social" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="footer__a--social" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="footer__a--social" href=""><i class="fab fa-twitter"></i></a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+       
+
+</footer>
+    
+     
+    
+
+</body>
+</html>

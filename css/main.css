@@ -1,0 +1,286 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+/*Tamaño de letra paar diferentes dispositivos*/
+h1 {
+  font-size: clamp(1.5em, 5vw, 2.5em);
+}
+
+h2 {
+  font-size: clamp(2em, 4vw, 2.7em);
+}
+
+h3 {
+  font-size: clamp(1.5em, 3vw, 2em);
+}
+
+p, li {
+  font-size: clamp(1em, 2.5vw, 1.25em);
+}
+
+a {
+  text-decoration: none;
+  color: #6AC6DE;
+}
+
+/* se estiliza  el logo  y el menu de navegacion*/
+.header {
+  display: flex;
+  justify-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: none;
+  align-items: center;
+  min-height: 70px;
+  background-color: #091E3F;
+  padding: 10px;
+}
+.header__logo {
+  display: flex;
+  justify-items: none;
+  flex-direction: row;
+  justify-content: none;
+  text-align: none;
+  align-items: center;
+}
+.header__img {
+  height: 60px;
+}
+.header__nav__a {
+  font-weight: 600;
+  padding-right: 20px;
+}
+.header__nav__a:hover {
+  color: #EDE7E3;
+}
+
+/* se estiliza el banner de la pagina*/
+.banner {
+  display: flex;
+  justify-items: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 27vh;
+  color: #EDE7E3;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/contenedores-imagen-rena-18-18-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* se estiliza  formulario*/
+.formulario {
+  width: 400px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 0;
+  border-radius: 6px;
+  background-color: #091E3F;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  box-shadow: 7px 13px 37px #000;
+}
+.formulario__h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #EDE7E3;
+}
+.formulario__controls, .formulario__estado {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 26px;
+  border-radius: 6px;
+  background-color: #6AC6DE;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+}
+.formulario label {
+  color: #EDE7E3;
+}
+.formulario .button {
+  width: 100%;
+  background: #EDE7E3;
+  border: none;
+  padding: 12px;
+  color: #000000;
+  margin: 16px 0;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* se estiliza Panel de estado*/
+.estado__h2 {
+  padding: 50px;
+  text-align: center;
+  margin: 16px 0;
+}
+.estado__p {
+  display: grid;
+  justify-items: none;
+  flex-direction: none;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  /*@include style(0,20px,600px auto, 0, 10px,);*/
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 700px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  background-color: #6AC6DE;
+}
+
+.listas {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 700px;
+  margin: 30px auto;
+}
+.listas__table {
+  margin: 20px 0;
+  color: #000000;
+  font-size: 14px;
+  table-layout: fixed;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.listas__thead {
+  background-color: #6AC6DE;
+}
+.listas__th {
+  padding: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.listas__tbody {
+  background-color: #091E3F;
+  text-align: center;
+  color: #EDE7E3;
+}
+.listas__td {
+  padding: 15px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+.listas__td--movil {
+  display: none;
+}
+.listas__button {
+  width: 100%;
+  background: #EDE7E3;
+  border: none;
+  padding: 12px;
+  color: #000000;
+  margin: 16px 0;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+/* Estilo para  footer */
+.footer {
+  background-color: #EDE7E3;
+  padding: 80px 0;
+}
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer__img {
+  height: 60px;
+}
+.footer__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__links {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer__ul {
+  list-style-type: none;
+}
+.footer__a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #091E3F;
+  display: block;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+.footer__a:hover {
+  background-color: #EDE7E3;
+}
+.footer__a--social {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: #091E3F;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.footer__a--social:hover {
+  background-color: #EDE7E3;
+}
+
+/* se estiliza  
+para dispositivos moviles*/
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+  }
+  .header__nav {
+    padding: 10px 0px;
+  }
+  main {
+    padding: 1em 2px;
+  }
+  .listas__thead {
+    display: none;
+    text-align: center;
+  }
+  .listas__table {
+    width: 100%;
+    background-color: #EDE7E3;
+  }
+  .listas__tr {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #091E3F;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+  .listas__td--movil {
+    display: flex;
+    color: #6AC6DE;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  /* footer  */
+  .footer__links {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .footer__row {
+    text-align: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=main.css.map */

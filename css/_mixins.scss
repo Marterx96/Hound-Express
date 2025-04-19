@@ -1,0 +1,47 @@
+@mixin reset{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+@mixin flex( $display:flex, $flexI:center, $flexD:column, $flexJ:center, $flexT:center, $items:center){
+    display:$display;
+    justify-items: $flexI;
+    flex-direction: $flexD;
+    justify-content:$flexJ;
+    text-align: $flexT;
+    align-items: $items;
+       
+
+}
+@mixin backimage ($linkimg:'../img/contenedores-imagen-rena-18-18-1.jpg'){
+    height: 27vh;
+    color: $colorfonts;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)), 
+        url($linkimg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}
+@mixin style($width:100%, $padding:10px, $margin:auto, $top:100px, $bottom:26px, $radius:6px){
+    width: $width;
+    padding: $padding;
+    margin:$margin;
+    margin-top: $top;
+    margin-bottom:$bottom ;
+    border-radius:$radius ;
+
+}
+@mixin button ($colorfonts:#EDE7E3,  $color:#000000 ){
+    width: 100%;
+    background: $colorfonts;
+    border: none;
+    padding: 12px;
+    color: $color;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 6px;
+
+}

@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+/*Tamaño de letra pa diferentes dispositivos*/
+h1 {
+    font-size: clamp(1.5em, 5vw, 2.5em);
+}
+h2 {
+    font-size: clamp(2em, 4vw, 2.7em);
+}
+h3{
+    font-size: clamp(1.5em, 3vw, 2em);
+}
+p, li {
+    font-size: clamp(1em, 2.5vw, 1.25em);
+}
+a{
+    text-decoration: none;
+    color: #6AC6DE;
+    
+}
+/* se estiliza  el logo  y el menu de navegacion*/
+header{
+    display: flex;
+    min-height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #091E3F;
+    padding: 10px;
+   
+}
+
+.logo {
+    display: flex;
+    
+}
+.logo img {
+    height: 60px;
+} 
+nav a{
+    font-weight: 600;
+    padding-right: 20px;
+}   
+nav a:hover{
+    color:#EDE7E3
+}
+/* se estiliza el banner de la pagina*/
+#banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 27vh;
+    color: #dddddd;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)), 
+        url('../img/contenedores-imagen-rena-18-18-1.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+}        
+
+/* se estiliza  formulario*/
+#formulario{
+    width: 400px;
+    background-color: #091E3F;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 6px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 7px 13px 37px #000;
+}
+#formulario h2 {
+    font-size: 22px;
+    margin-bottom:20px;
+    color: #EDE7E3;
+}
+.controls, #estado{
+    width: 100%;
+    background-color: #6AC6DE;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom:26 px ;
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    
+
+}
+.button{
+    width: 100%;
+    background: #EDE7E3;
+    border: none;
+    padding: 12px;
+    color: #000000;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 6px;
+
+}
+
+label{
+    color: #EDE7E3;
+}
+#estado__general h2{
+    padding: 50px;
+    text-align: center;
+    margin: 16px 0;
+}
+#estado__general p{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    border-radius: 10px;
+    background-color: #6AC6DE;
+}
+
+#listas{
+    
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+    
+
+}
+}
+table {
+    
+    margin: 20px 0; 
+    color: #000000;
+    font-size: 14px;
+    table-layout:fixed;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+thead {
+    background-color:#6AC6DE ;
+}
+th {
+    padding: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.td__movil{
+    display: none;
+}
+tbody{
+    background-color: #091E3F;
+    text-align: center;
+    color: #dddddd;
+}
+td{
+    padding: 15px;
+    border-bottom: solid 1px rgb(255, 255, 255, 0.2);
+
+
+}
+.button__td {
+    width: 100%;
+    background: #EDE7E3;
+    border: none;
+    padding: 12px;
+    color: #000000;
+    margin: 16px 0;
+    font-size: 16px;
+    border-radius: 6px;
+}
+/* Estilo para  footer */
+.footer{
+
+    background-color: #dddddd;
+    padding: 80px 0;
+}
+.footer__container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer__img{
+    height: 60px;
+
+}
+.footer__row{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.footer__links{
+    width: 25%;
+    padding: 0 15px;
+    
+}
+.footer__links ul{
+    list-style-type: none;
+}
+.footer__links li a{
+    font-size: 18px;
+    text-decoration: none;
+    color: #091E3F;
+    display:block;
+    margin-bottom:15px ;
+    transition: all .3s ease;
+}
+.footer__links li a:hover{
+    color: #6AC6DE;
+}
+.footer__social a{
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: #091E3F;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all .5s ease;
+
+
+}
+.footer__social a:hover{
+    background-color: #e0e0e0;
+}
+
+
+/* se estiliza  
+para dispositivos moviles*/
+
+@media (max-width:700px){
+    header {
+        flex-direction: column;
+
+    }
+    nav{
+        padding: 10px 0px;
+    }
+
+    main{
+        padding: 1em 2px;
+    }
+    table{
+        width: 100%;
+        background-color: #6AC6DE;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #091E3F;
+        padding: 1em;
+        margin-bottom: 1em;
+    }
+    .td__movil{
+        display:flex;
+        color: #6ae0fd;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        
+
+    }
+    table thead{
+        display: none;
+        text-align: center ;
+    }
+
+    /* footer  */
+    .footer__row{
+        text-align: center;
+        justify-content: center;
+
+    }
+    .footer__links{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    
+
+
+}

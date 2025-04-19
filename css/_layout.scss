@@ -1,0 +1,303 @@
+*{
+    @include reset;
+}
+body{
+    font-family: sans-serif;
+    margin: 0;
+}
+/*Tamaño de letra paar diferentes dispositivos*/
+
+h1{
+    font-size: clamp(1.5em, 5vw, 2.5em);
+}
+h2 {
+    font-size: clamp(2em, 4vw, 2.7em);
+}
+h3{
+    font-size: clamp(1.5em, 3vw, 2em);
+}
+p, li {
+    font-size: clamp(1em, 2.5vw, 1.25em);
+}
+a{
+    text-decoration: none;
+    color: #6AC6DE;
+    
+}
+
+/* se estiliza  el logo  y el menu de navegacion*/
+.header{
+    @include flex(flex, center, row, space-between, none,center);
+    min-height: 70px;
+    background-color:$colorBlue;
+    padding: 10px;
+    
+    &__logo{
+        @include flex(flex,none,row,none,none)
+
+
+    }
+    &__img{
+        height: 60px;
+    
+    }
+    &__nav{
+        &__a{
+            font-weight: 600;
+            padding-right: 20px;
+        }
+        &__a:hover{
+            color:$colorfonts;
+        }
+
+    }
+}
+/* se estiliza el banner de la pagina*/
+.banner{
+    @include flex(flex,none,column,center,center,center);
+    @include backimage('../img/contenedores-imagen-rena-18-18-1.jpg');
+}
+/* se estiliza  formulario*/
+.formulario{
+    @include style(400px,30px,auto,100px,0, 6px );
+    background-color: #091E3F;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 7px 13px 37px #000;
+    &__h2{
+        font-size: 22px;
+        margin-bottom:20px;
+        color: #EDE7E3;
+
+    }
+    &__controls, &__estado{
+        @include style(100%,10px,0,0,26px, 6px );
+        background-color: $colorCeleste;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 18px;
+        
+
+    }
+    label{
+        color: $colorfonts;
+    }
+    .button{
+        @include button;
+
+    
+    }
+    
+
+
+}
+/* se estiliza Panel de estado*/
+.estado{
+    &__h2{
+        padding: 50px;
+        text-align: center;
+        margin: 16px 0;
+        
+
+    }
+    &__p{
+        @include flex(grid,none,none,center,center,center);
+        /*@include style(0,20px,600px auto, 0, 10px,);*/
+        padding: 20px;
+        
+        margin: 30px auto;
+        border-radius: 10px;
+
+        max-width: 700px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        
+        background-color: $colorCeleste;
+
+    }
+}
+.listas{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    margin: 30px auto;
+    &__h2{
+
+    }
+    &__table{
+        margin: 20px 0; 
+        color: #000000;
+        font-size: 14px;
+        table-layout:fixed;
+        border-collapse: collapse;
+        table-layout: fixed;
+
+    }
+    &__thead{
+        background-color:#6AC6DE ;
+
+    }
+    &__tr{
+
+    }
+    &__th{
+        padding: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+    }
+ 
+    &__tbody{
+        background-color:$colorBlue;
+        text-align: center;
+        color:$colorfonts;
+
+    }
+    &__tr{
+
+    }
+    &__td{
+        padding: 15px;
+        border-bottom: solid 1px rgb(255, 255, 255, 0.2);
+
+    }
+    &__td--movil{
+        display: none;
+
+    }
+    &__button{
+        width: 100%;
+        background:$colorfonts;
+        border: none;
+        padding: 12px;
+        color: #000000;
+        margin: 16px 0;
+        font-size: 16px;
+        border-radius: 6px;
+
+    }
+
+    
+    
+}
+/* Estilo para  footer */
+.footer{
+
+    background-color:$colorfonts;
+    padding: 80px 0;
+    &__container{
+        max-width: 1200px;
+        margin: 0 auto;
+
+    }
+    &__img{height: 60px;}
+    &__row{   
+        display: flex;
+        flex-wrap: wrap;}
+    &__links{
+        width: 25%;
+        padding: 0 15px;
+    }
+    &__ul{
+        list-style-type: none;
+    }
+    &__a{
+        font-size: 18px;
+        text-decoration: none;
+        color:$colorBlue;
+        display:block;
+        margin-bottom:15px ;
+        transition: all .3s ease;
+        &:hover{
+            background-color: $colorfonts;
+        }
+    }
+    &__a--social{
+        display: inline-block;
+        min-height: 40px;
+        width: 40px;
+        background-color:$colorBlue;
+        margin: 0 10px 10px 0;
+        text-align: center;
+        line-height: 40px;
+        border-radius: 50%;
+        transition: all .5s ease;
+        &:hover{
+            background-color:$colorfonts;
+        }
+
+    }
+
+
+    
+}
+
+
+
+/* se estiliza  
+para dispositivos moviles*/
+
+@media (max-width:700px){
+    .header {
+        flex-direction: column;
+        &__nav{
+            padding: 10px 0px;
+        }
+
+    }
+    
+
+    main{
+        padding: 1em 2px;
+    }
+    .listas{
+        &__thead{
+            display: none;
+            text-align: center ;
+        }
+        &__table{
+            width: 100%;
+            background-color:$colorfonts;
+
+        }
+        &__tr{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #091E3F;
+            padding: 1em;
+            margin-bottom: 1em;
+
+        }
+        &__td--movil{
+            display:flex;
+            color: $colorCeleste;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+    }
+
+
+    /* footer  */
+    .footer{
+        &__links{
+        width: 100%;
+        margin-bottom: 30px;
+        }
+        &__row{
+            text-align: center;
+            justify-content: center;
+    
+        }
+    }
+
+
+
+
+    
+
+
+}
+
+
