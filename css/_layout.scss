@@ -156,10 +156,47 @@ a{
     &__tr{
 
     }
-    &__td{
-        padding: 15px;
-        border-bottom: solid 1px rgb(255, 255, 255, 0.2);
-
+     .listas {
+      // ...existing code...
+    
+      &__td {
+        // ...existing code...
+        .listas__button {
+          display: inline-block;
+          margin: 2px 4px;
+          padding: 6px 14px;
+          border: none;
+          border-radius: 5px;
+          font-size: 1em;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+          box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+          outline: none;
+    
+          &[data-accion="actualizar"] {
+            background: #1976d2;
+            color: #fff;
+          }
+          &[data-accion="historial"] {
+            background: #43a047;
+            color: #fff;
+          }
+          &[data-accion="editar"] {
+            background: #ffa000;
+            color: #fff;
+          }
+          &[data-accion="borrar"] {
+            background: #d32f2f;
+            color: #fff;
+          }
+    
+          &:hover {
+            opacity: 0.85;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.13);
+          }
+        }
+      }
     }
     &__td--movil{
         display: none;
